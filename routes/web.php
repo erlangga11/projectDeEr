@@ -3,4 +3,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ex','ExampleController@Example');
+Route::get('/dashboard','DashboardController@Dashboard');
+Auth::routes();
+Route::get('/user','UserController@User');
+Route::post('/user/update/{id}','UserController@update');
+Route::get('/absensi/{NID}','AbsensiController@Absensi');
+Route::get('/matkul','MatkulController@Matkul');
