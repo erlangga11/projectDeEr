@@ -28,8 +28,7 @@
                           <td>{{$absensi->first_name}} {{$absensi->last_name}}</td>
                           <td>{{$absensi->prodi}}</td>
                           <td>{{$absensi->mapel}}</td>
-                          
-                          <td class="text-primary"> $36,738</td>
+                          <td>{{$absensi->mapel}}</td>
                         </tr>
                       </tbody>
                     </table>

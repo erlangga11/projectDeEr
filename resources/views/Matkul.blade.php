@@ -16,7 +16,7 @@
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                 <thead class="">
-                                    <th>Hari</th>
+                                    <th>Id</th>
                                     <th>Matkul</th>
                                     <th>Tugas</th>
                                     <th>Upload</th>
@@ -26,8 +26,12 @@
                                     <tr>
                                     <td>{{$u->id}}</td>
                                     <td>{{$u->nama_mapel}}</td>
-                                    <td>{{$u->file_materi}}</td>
-                                    <td>{{$u->file_tugas}}</td>
+                                    <td> 
+                                    
+                                    </td>
+                                    <td><form action="/matkul/updload/{{$u->file_materi}}" method="post" enctype="multipart/form-data">
+                                    {{csrf_field()}}
+                                    <input type="file" name="id" value="{{$u->file_tugas}}"></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

@@ -24,7 +24,7 @@ class UserController extends Controller
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->address = $request->address;
-        $user->prodi = $request->prodi;
+        $user->kelas = $request->kelas;
         $user->bio = $request->bio;
         $user->save();
         return redirect('/user');

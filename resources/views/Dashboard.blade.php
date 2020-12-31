@@ -1,4 +1,7 @@
 @extends('master')  
+@section('navbar')
+<a class="navbar-brand" href="javascript:void(0)">Selamat Datang!</a>
+@endsection
 @section('content')
 <div class="content">
         <div class="container-fluid">

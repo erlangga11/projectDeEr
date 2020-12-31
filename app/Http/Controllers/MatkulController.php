@@ -18,5 +18,16 @@ class MatkulController extends Controller
         $mapel = mapel::all();
         return view('Matkul', ['mapel'=>$mapel]);
         }
-    
+    public function getDownload($id){
+        //PDF file is stored under project/public/download/info.pdf
+        $u = \App\mapel::find($id);
+        $file="{{$u->file_materi}}";
+        return Response::download($file);
+    }
+    public function upload($id){
+        //PDF file is stored under project/public/download/info.pdf
+        $u = \App\mapel::find($id);
+        $file="{{$u->file_materi}}";
+        return Response::download($file);
+    }
 }

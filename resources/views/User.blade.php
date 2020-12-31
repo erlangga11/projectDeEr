@@ -61,7 +61,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Prodi</label>
-                          <input type="text" class="form-control" disabled value="{{$user->Prodi}}">
+                          <input type="text" class="form-control" name="Prodi" value="{{$user->Prodi}}" disabled >
                         </div>
                       </div>
                       <div class="col-md-4">
@@ -77,7 +77,7 @@
                           <label>About Me</label>
                           <div class="form-group">
                             <label class="bmd-label-floating">Sentences</label>
-                            <input type="text" class="form-control" name="bio" rows="5" value="{{$user->kelas}}">
+                            <input type="text" class="form-control" name="bio" rows="5" value="{{$user->bio}}">
                           </div>
                         </div>
                       </div>

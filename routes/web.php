@@ -9,3 +9,7 @@ Route::get('/user','UserController@User');
 Route::post('/user/update/{id}','UserController@update');
 Route::get('/absensi/{NID}','AbsensiController@Absensi');
 Route::get('/matkul','MatkulController@Matkul');
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@Dashboard')->name('dashboard');
