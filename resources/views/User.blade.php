@@ -13,19 +13,19 @@
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body">
-                  <form action="/user/update/{{$user->id}}" method="post" enctype="multipart/form-data">
+                  <form action="/user/update/{{ Auth::user()->id }}" method="post" enctype="multipart/form-data">
                   {{csrf_field()}}
                     <div class="row">
                       <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">NIM</label>
-                          <input type="text" class="form-control" name="NID" disabled value="{{$user->NID}}">
+                          <input type="text" class="form-control" name="NID" disabled value="{{ Auth::user()->NID }}">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control" name="email" value="{{$user->email}}">
+                          <input type="email" class="form-control" name="email" value="{{ Auth::user()->email }}">
                         </div>
                       </div>
                     </div>
@@ -33,13 +33,13 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">First Name</label>
-                          <input type="text" class="form-control" name="first_name" value="{{$user->first_name}}">
+                          <input type="text" class="form-control" name="first_name" value="{{ Auth::user()->first_name }}">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Last Name</label>
-                          <input type="text" class="form-control" name="last_name" value="{{$user->last_name}}">
+                          <input type="text" class="form-control" name="last_name" value="{{ Auth::user()->last_name }}">
                         </div>
                       </div>
                     </div>
@@ -47,7 +47,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Address</label>
-                          <input type="text" class="form-control" name="address" value="{{$user->address}}">
+                          <input type="text" class="form-control" name="address" value="{{ Auth::user()->address }}">
                         </div>
                       </div>
                     </div>
@@ -55,19 +55,19 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Jurusan Teknologi Informasi</label>
-                          <input type="text" class="form-control" disabled value="{{$user->jurusan}}">
+                          <input type="text" class="form-control" disabled value="{{ Auth::user()->jurusan }}">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Prodi</label>
-                          <input type="text" class="form-control" name="Prodi" value="{{$user->Prodi}}" disabled >
+                          <input type="text" class="form-control" name="Prodi" value="{{ Auth::user()->Prodi }}" disabled >
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Kelas</label>
-                          <input type="text" class="form-control" name="kelas"  value="{{$user->kelas}}">
+                          <input type="text" class="form-control" name="kelas"  value="{{ Auth::user()->kelas }}">
                         </div>
                       </div>
                     </div>
@@ -77,7 +77,7 @@
                           <label>About Me</label>
                           <div class="form-group">
                             <label class="bmd-label-floating">Sentences</label>
-                            <input type="text" class="form-control" name="bio" rows="5" value="{{$user->bio}}">
+                            <input type="text" class="form-control" name="bio" rows="5" value="{{ Auth::user()->bio }}">
                           </div>
                         </div>
                       </div>

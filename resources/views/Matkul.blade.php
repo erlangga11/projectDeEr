@@ -27,11 +27,13 @@
                                     <td>{{$u->id}}</td>
                                     <td>{{$u->nama_mapel}}</td>
                                     <td> 
-                                    
+                                    <form action="/matkul/updload/{{$u->file_materi}}" method="post" enctype="multipart/form-data">
+                                    {{csrf_field()}}
+                                    <input type="file" name="id" value="{{$u->file_materi}}"></form>
                                     </td>
                                     <td><form action="/matkul/updload/{{$u->file_materi}}" method="post" enctype="multipart/form-data">
                                     {{csrf_field()}}
-                                    <input type="file" name="id" value="{{$u->file_tugas}}"></td>
+                                    <input type="file" name="id" value="{{$u->file_tugas}}"></form></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

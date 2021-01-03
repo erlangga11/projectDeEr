@@ -14,9 +14,8 @@ class UserController extends Controller
         $user = json_decode(json_encode($user));
         return view('user', ['users'=>$user], ['id'=>$id]);
     }
-    public function User($id=1){
-        $user = User::find($id);
-        return view('User',['user' => $user]);
+    public function User(){
+        return view('User');
         }
     public function update($id, Request $request){
         $user = User::find($id);

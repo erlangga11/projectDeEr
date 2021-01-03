@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use app\user;
+use app\User;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -28,7 +29,26 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+    public function redirectTo()
+     {
+      $for = [
+      'admin' => 'homesiswa',
+      'siswa' => 'homesiswa',
+      'dosen' => 'homedosen',
+      ];
+      return $this->redirectTo = route($for[auth()->user()->roles]);
+     }
 
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required',
+            'password' => 'required',
+            ],[
+            'email.required' => 'Email Tidak Boleh kosong',
+            'password.required' => 'Password Tidak Boleh kosong',
+        ]);
+    }
     /**
      * Create a new controller instance.
      *
