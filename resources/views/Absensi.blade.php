@@ -25,7 +25,7 @@
                       <tbody>
                         <tr>
                           <td>{{$absensi->NID}}</td>
-                          <td>{{$absensi->first_name}} {{$absensi->last_name}}</td>
+                          <td>{{$absensi->first_name}}</td>
                           <td>{{$absensi->prodi}}</td>
                           <td>{{$absensi->mapel}}</td>
                           <td>{{$absensi->mapel}}</td>

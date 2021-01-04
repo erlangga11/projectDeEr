@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Laporan PDF Absensi</title>
+<title>Laporan PDF USER</title>
 </head>
 <body>
 <style type="text/css">
@@ -43,18 +43,20 @@ body {
 <th>Nama</th>
 <th>Email</th>
 <th>Address</th>
+<th>Roles</th>
+<th>Bio</th>
 </tr>
 </thead>
 <tbody>
 @php $i=1 @endphp
 @foreach($user as $u)
 <tr>
-<td>{{ $i++ }}</td>
-<td>{{$u->name}}</td>
+<td>{{ $u -> NID }}</td>
+<td>{{$u->first_name}}</td>
 <td>{{$u->email}}</td>
-<td>
-<img width="120px" src = "{{public_path('storage/'.$u->profil_pict)}}"
-</td>
+<td>{{$u->address}}</td>
+<td>{{$u->roles}}</td>
+<td>{{$u->bio}}</td>
 </tr>
 @endforeach
 </tbody>

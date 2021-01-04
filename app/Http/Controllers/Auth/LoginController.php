@@ -34,7 +34,7 @@ class LoginController extends Controller
       $for = [
       'admin' => 'homesiswa',
       'siswa' => 'homesiswa',
-      'dosen' => 'homedosen',
+      'dosen' => 'homesiswa',
       ];
       return $this->redirectTo = route($for[auth()->user()->roles]);
      }

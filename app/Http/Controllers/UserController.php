@@ -28,4 +28,9 @@ class UserController extends Controller
         $user->save();
         return redirect('/user');
             }
+    public function cetak_pdf(){
+        $user = User::all();
+        $pdf = PDF::loadview('user_pdf',['user'=>$user]);
+        return $pdf->stream();
+       }
 }

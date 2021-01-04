@@ -37,12 +37,14 @@
               <p>User Profile</p>
             </a>
           </li>
+          @can('user-display','manage-materi')
           <li class="nav-item ">
-            <a class="nav-link" href="/absensi">
+            <a class="nav-link" href="/absensi/{{ Auth::user()->NID }}">
               <i class="material-icons">content_paste</i>
               <p>Absensi</p>
             </a>
           </li>
+          @endcan
           <li class="nav-item ">
             <a class="nav-link" href="/matkul">
               <i class="material-icons">library_books</i>
@@ -107,7 +109,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
+                <a class="nav-link" href="/logout">
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account

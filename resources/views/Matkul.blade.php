@@ -27,18 +27,26 @@
                                     <td>{{$u->id}}</td>
                                     <td>{{$u->nama_mapel}}</td>
                                     <td> 
-                                    <form action="/matkul/updload/{{$u->file_materi}}" method="post" enctype="multipart/form-data">
+                                    <form action="/matkul/upload/{{$u->id}}" method="post" enctype="multipart/form-data">
                                     {{csrf_field()}}
-                                    <input type="file" name="id" value="{{$u->file_materi}}"></form>
+                                    
+                                    <input type="file" name="file_materi" value="{{$u->file_materi}}">
+                                    <button type="download">download</button>
+                                    
                                     </td>
-                                    <td><form action="/matkul/updload/{{$u->file_materi}}" method="post" enctype="multipart/form-data">
+                                    <td>
+                                    <form action="/matkul/upload/{{$u->id}}" method="post" enctype="multipart/form-data">
                                     {{csrf_field()}}
-                                    <input type="file" name="id" value="{{$u->file_tugas}}"></form></td>
+                                    <input type="file" name="file_tugas" value="{{$u->file_tugas}}"></td>
                                     </tr>
+                                    </form>
                                 @endforeach
                                 </tbody>
                                 </table>
                             </div>
+                            <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                            <div class="clearfix"></div>
+                            </form>   
                             </div>
                         </div>
                     </div>

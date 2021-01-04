@@ -17,6 +17,6 @@ class AbsensiController extends Controller
     }
     public function Absensi($NID){
         $absensi = absensi::where(['NID'=>$NID])->first();
-        return view('Absensi', ['absensi'=>$absensi],['NID'=>$NID] );
+        return view('Absensi', ['absensi'=>$absensi] );
         }
 }

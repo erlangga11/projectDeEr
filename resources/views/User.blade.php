@@ -82,6 +82,9 @@
                         </div>
                       </div>
                     </div>
+                    @can('admin-display')
+                    <a href="/user/cetak_pdf" class="btn btn-primary" target="_blank">CETAK PDF</a>
+                    @endcan
                     <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
                     <div class="clearfix"></div>
                   </form>
